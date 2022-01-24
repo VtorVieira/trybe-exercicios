@@ -5,7 +5,7 @@
 
 ##### ![progress](https://progress-bar.dev/100/ "progresso") Bloco 01: Unix & Bash
 
-##### ![progress](https://progress-bar.dev/0/ "progresso") Bloco 02: Git, GitHub e Internet
+##### ![progress](https://progress-bar.dev/33/ "progresso") Bloco 02: Git, GitHub e Internet
 
 ##### ![progress](https://progress-bar.dev/0/ "progresso") Bloco 03: Introdução à HTML e CSS
 
