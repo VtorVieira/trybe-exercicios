@@ -5,8 +5,4 @@ O que eu vou aprender na Trybe:
 - Git-e-GitHub
 - Internet
 - HTML
-<<<<<<< HEAD
 - CSS
-=======
-- CSS
->>>>>>> 8e3151456d4e6b77de7dc6a1781ebae51c404169
