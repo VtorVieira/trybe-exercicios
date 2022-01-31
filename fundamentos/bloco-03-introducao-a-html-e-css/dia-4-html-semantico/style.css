@@ -1,0 +1,13 @@
+h2{
+    color: lightcoral;
+}
+nav li{
+    display: inline-block;
+    margin: 10px;
+}
+img{
+    width: 200px;
+}
+td{
+    font-weight: bold;
+}
