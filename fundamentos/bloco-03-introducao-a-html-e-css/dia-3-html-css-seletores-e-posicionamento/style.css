@@ -27,7 +27,7 @@ h1 em{
 li:hover .stackoverflow{
     color: orange;
     font-weight: bold;
-    font-family: ;
+    font-family: italic;
 }
 li:hover .MDN-Web-Docs{
     color: black;
