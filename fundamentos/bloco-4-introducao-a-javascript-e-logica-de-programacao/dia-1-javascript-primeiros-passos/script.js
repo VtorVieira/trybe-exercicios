@@ -1,9 +1,18 @@
-const valorCusto = 9;
-const valorVenda = -1;
 
-let valorCustoTotal = valorCusto * 0.2;
-let lucro = valorVenda - valorCustoTotal
-
-if(valorCusto < 0 || valorVenda < 0){
-    console.log("Valores Invalidos")
+let peca = "CAVALO";
+peca = peca.toLowerCase();
+if(peca == "peao"){
+    console.log("anda uma pra frente ou duas na primeira jogada")
+} else if(peca == "torre"){
+    console.log("anda quantas casas quiser pra frente ou para o lado");
+} else if(peca == "cavalo"){
+    console.log("anda em L");
+} else if(peca == "bispo"){
+    console.log("anda na diagonal");
+} else if(peca == "rainha"){
+    console.log("anda quantas casas quiser e para todas as direções");
+} else if(peca == "rei"){
+    console.log("anda uma casa para todas as direções");
+} else{
+    console.log("Peça invalida!");
 }
