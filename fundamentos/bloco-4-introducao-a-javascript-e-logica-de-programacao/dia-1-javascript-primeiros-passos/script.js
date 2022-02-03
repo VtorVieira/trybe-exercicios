@@ -1,11 +1,7 @@
-const a = 7;
-const b = 9;
-const c = 8;
+const a = 0;
 
-if(a > b && a > c){
-    console.log("A const A é a maior: " + a);
-}else if(b > c){
-    console.log("A const B é a maior: " + b);
+if(a > 0){
+    console.log("positive");
 }else{
-    console.log("A const C é a maior: " + c);
+    console.log("negative");
 }
