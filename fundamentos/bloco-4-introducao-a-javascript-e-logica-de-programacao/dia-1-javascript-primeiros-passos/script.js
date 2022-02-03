@@ -1,9 +1,9 @@
-const num1 = 9;
-const num2 = 9;
-const num3 = 6;
+const valorCusto = 9;
+const valorVenda = -1;
 
-if(num1 % 2 !== 0 || num2 % 2 !== 0 || num3 % 2 !== 0){
-    console.log("É Impar");
-}else{
-    console.log("É Par");
+let valorCustoTotal = valorCusto * 0.2;
+let lucro = valorVenda - valorCustoTotal
+
+if(valorCusto < 0 || valorVenda < 0){
+    console.log("Valores Invalidos")
 }
