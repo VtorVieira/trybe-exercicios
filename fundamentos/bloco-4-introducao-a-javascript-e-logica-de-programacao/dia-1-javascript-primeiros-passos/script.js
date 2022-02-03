@@ -1,7 +1,11 @@
-const a = 0;
+const ladoA = 60;
+const ladoB = 60;
+const ladoC = 60;
 
-if(a > 0){
-    console.log("positive");
+let soma = ladoA + ladoB + ladoC;
+
+if(soma == 180){
+    console.log(true);
 }else{
-    console.log("negative");
+    console.log(false);
 }
