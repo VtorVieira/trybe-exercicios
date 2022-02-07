@@ -1,13 +1,13 @@
-let info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
-};
-//Exercicio 1
-/*console.log("Bem-vinda, " + info.personagem);
- */
-//Exercicio 2
-info["recorrente"] = "Sim"; //adicionado a propriedade recorrente com o valor 'sim'
+// let info = {
+//   personagem: "Margarida",
+//   origem: "Pato Donald",
+//   nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+// };
+// //Exercicio 1
+// /*console.log("Bem-vinda, " + info.personagem);
+//  */
+// //Exercicio 2
+// info["recorrente"] = "Sim"; //adicionado a propriedade recorrente com o valor 'sim'
 /*
 //console.log(info);
 
@@ -51,21 +51,33 @@ console.log("Ambos recorrentes");*/
 //console.log("O livro favorito de " + leitor.nome + ' ' + leitor.sobrenome + ' se chama ' + nomeTitulo.titulo);
 
 //Exercicio 7 e 8
-let leitor = {
-  nome: "Julia",
-  sobrenome: "Pessoa",
-  idade: 21,
-  livrosFavoritos: [
-    {
-      titulo: "O Pior Dia de Todos",
-      autor: "Daniela Kopsch",
-      editora: "Tordesilhas",
-    },
-    {
-      titulo: "Harry Potter e o Prisioneiro de Azkaban",
-      autor: "JK Rowling",
-      editora: "Rocco",
-    },
-  ],
-};
-console.log(leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos");
+// let leitor = {
+//   nome: "Julia",
+//   sobrenome: "Pessoa",
+//   idade: 21,
+//   livrosFavoritos: [
+//     {
+//       titulo: "O Pior Dia de Todos",
+//       autor: "Daniela Kopsch",
+//       editora: "Tordesilhas",
+//     },
+//     {
+//       titulo: "Harry Potter e o Prisioneiro de Azkaban",
+//       autor: "JK Rowling",
+//       editora: "Rocco",
+//     },
+//   ],
+// };
+// console.log(leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos");
+
+//Parte II - Exercicio 1
+//consultado esse material https://github.com/brunoemferreira/js-palindromo/blob/main/palindromo.js
+function palindromo(palavra){
+    let palin = palavra.split("").reverse().join("");
+    if (palin === palavra) {
+        console.log("True");
+      } else {
+        console.log("False");
+      }
+}
+palindromo("desenvolvimento");
