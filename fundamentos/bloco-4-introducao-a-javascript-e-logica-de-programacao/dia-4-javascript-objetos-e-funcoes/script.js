@@ -95,3 +95,18 @@ console.log("Ambos recorrentes");*/
 // let array = [2, 3, 6, 7, 10, 1];
 
 // retornoArry(array)
+
+//Parte II - Exercicio 3
+// function retornoArry(array) {
+//   let menor = 0;
+//   for (let index = 0; index < array.length; index++) {
+//     if (array[index] < menor) {
+//       menor = index;
+//     }
+//   }
+//   console.log(menor);
+// }
+// let array = [2, 4, 6, 7, 10, 0, -3];
+
+// retornoArry(array);
+
