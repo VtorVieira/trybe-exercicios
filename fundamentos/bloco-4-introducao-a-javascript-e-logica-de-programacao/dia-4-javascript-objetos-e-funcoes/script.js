@@ -72,12 +72,26 @@ console.log("Ambos recorrentes");*/
 
 //Parte II - Exercicio 1
 //consultado esse material https://github.com/brunoemferreira/js-palindromo/blob/main/palindromo.js
-function palindromo(palavra){
-    let palin = palavra.split("").reverse().join("");
-    if (palin === palavra) {
-        console.log("True");
-      } else {
-        console.log("False");
-      }
-}
-palindromo("desenvolvimento");
+// function palindromo(palavra){
+//     let palin = palavra.split("").reverse().join("");
+//     if (palin === palavra) {
+//         console.log("True");
+//       } else {
+//         console.log("False");
+//       }
+// }
+// palindromo("desenvolvimento");
+
+//Parte II - Exercicio 2
+// function retornoArry(array){
+//     let maior = 0;
+//     for (let index = 0; index < array.length; index++) {
+//         if(array[index] > maior){
+//             maior = index;
+//         }
+//     }
+//     console.log(maior);
+// }
+// let array = [2, 3, 6, 7, 10, 1];
+
+// retornoArry(array)
