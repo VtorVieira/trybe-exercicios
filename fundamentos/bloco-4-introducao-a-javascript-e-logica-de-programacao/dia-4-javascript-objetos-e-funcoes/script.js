@@ -35,6 +35,22 @@ console.log(info.nota + ' e ' + info2.nota);
 console.log("Ambos recorrentes");*/
 
 //Exercicio 6
+// let leitor = {
+//   nome: "Julia",
+//   sobrenome: "Pessoa",
+//   idade: 21,
+//   livrosFavoritos: [
+//     {
+//       titulo: "O Pior Dia de Todos",
+//       autor: "Daniela Kopsch",
+//       editora: "Tordesilhas",
+//     },
+//   ],
+// };
+//let nomeTitulo = leitor.livrosFavoritos[0];
+//console.log("O livro favorito de " + leitor.nome + ' ' + leitor.sobrenome + ' se chama ' + nomeTitulo.titulo);
+
+//Exercicio 7 e 8
 let leitor = {
   nome: "Julia",
   sobrenome: "Pessoa",
@@ -45,7 +61,11 @@ let leitor = {
       autor: "Daniela Kopsch",
       editora: "Tordesilhas",
     },
+    {
+      titulo: "Harry Potter e o Prisioneiro de Azkaban",
+      autor: "JK Rowling",
+      editora: "Rocco",
+    },
   ],
 };
-let nomeTitulo = leitor.livrosFavoritos[0];
-console.log("O livro favorito de " + leitor.nome + ' ' + leitor.sobrenome + ' se chama ' + nomeTitulo.titulo);
+console.log(leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos");
