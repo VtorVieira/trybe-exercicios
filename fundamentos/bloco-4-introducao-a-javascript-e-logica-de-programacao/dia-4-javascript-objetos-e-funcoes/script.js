@@ -110,3 +110,26 @@ console.log("Ambos recorrentes");*/
 
 // retornoArry(array);
 
+let array = ['java', 'javascript', 'python', 'html', 'css'];
+
+let maiorPalavra = array[0]
+//let menorPalavra = array[0]
+
+for(index = 0; index < array.length; index +=1){
+    if (maiorPalavra.length < array[index].length){
+        maiorPalavra = array[index]
+    }
+}
+/*console.log(maiorPalavra);
+for(index2 = 0; index2 < array.length; index2 +=1){
+    if (menorPalavra.length > array[index2].length){
+        menorPalavra = array[index2];
+    }
+}
+
+
+console.log(menorPalavra);*/
+
+
+
+
