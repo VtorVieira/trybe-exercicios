@@ -127,7 +127,18 @@
         listaNaoOrdenada.appendChild(numeroList);
       }
 
-      
+      // Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+      let priH3 = document.createElement("h3");
+      let secH3 = document.createElement("h3");
+      let terH3 = document.createElement("h3");
+
+      priH3.innerHTML = "Primeiro conteúdo para validação do h3";
+      secH3.innerHTML = "Segundo conteúdo para validação do h3";
+      terH3.innerHTML = "Terceiro conteúdo para validação do h3";
+
+      main.appendChild(priH3);
+      main.appendChild(secH3);
+      main.appendChild(terH3);
     </script>
   </body>
 </html>
