@@ -97,6 +97,36 @@
       imgSectionSegundoFilho.src = "https://picsum.photos/200";
       sectionSegundoFilho.appendChild(imgSectionSegundoFilho);
 
+      // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+      let listaNaoOrdenada = document.createElement("ul");
+      sectionTerceiroFilho.appendChild(listaNaoOrdenada);
+
+      let listaNumerica = [
+        "um",
+        "dois",
+        "tres",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+      for (let index in listaNumerica) {
+        //percorrendo a lista adicionando ela na variavel numeros
+        let numeros = listaNumerica[index];
+
+        //criado o elemente li, pois na linha 100 só criamos o elemento ul
+        let numeroList = document.createElement("li");
+
+        //adicionando na variavel numeroList o texto da valiriavel numeros, que contém as posições do arry listaNumerica
+        numeroList.innerText = numeros;
+
+        //adicionando o conteúdo numerico na lista nao ordenada, criada na linha 100
+        listaNaoOrdenada.appendChild(numeroList);
+      }
+
       
     </script>
   </body>
