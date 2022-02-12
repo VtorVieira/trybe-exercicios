@@ -158,7 +158,16 @@
       sectionFilhoUm.style.backgroundColor = "green";
 
       //15 Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
-
+      let listaRemovida = document.querySelectorAll('li');
+      console.log(listaNumerica);
+      for (let index = 0; index < listaRemovida.length; index++) {
+        let element = listaRemovida[index];
+        if (element.innerText.includes('nove')) {
+          listaNaoOrdenada.removeChild(element);
+        } else if(element.innerText.includes('dez')){
+          listaNaoOrdenada.removeChild(element);
+        }
+      }
       
     </script>
   </body>
