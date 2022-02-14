@@ -27,6 +27,8 @@ const dezDaysList = [
   21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
 ];
 
+//Exercicio 01
+
 //Os dias devem estar contidos em uma tag <li> , e todos devem ter a classe day . Ex: <li class="day">3</li>
 let dias = document.getElementById("days");
 
@@ -58,6 +60,21 @@ for (let index = 0; index < friday.length; index += 1) {
     friday[index].innerText == 18 ||
     friday[index].innerText == 25
   ) {
-    friday[index].classList.add('friday');
+    friday[index].classList.add("friday");
   }
 }
+
+// Exercício 2:
+
+// Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+// Adicione a este botão a ID "btn-holiday" .
+// Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
+
+function buttonHoliday(string) {
+  let btnDivHoliday = document.querySelector(".buttons-container");
+  let buttons = document.createElement("button");
+  buttons.id = "btn-holiday";
+  buttons.innerHTML = string;
+  btnDivHoliday.appendChild(buttons);
+}
+buttonHoliday("Feriados");
