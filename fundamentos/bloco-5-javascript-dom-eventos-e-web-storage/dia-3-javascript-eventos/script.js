@@ -122,20 +122,20 @@ buttonFriday("Sexta-feira");
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 
 function changeColorFridays(dezFridays) {
-  let btnDivFriday = document.querySelectorAll('.friday');
-  let friday = document.getElementById('btn-friday');
-  
-  friday.addEventListener('click', function () {
+  let btnDivFriday = document.querySelectorAll(".friday");
+  let friday = document.getElementById("btn-friday");
+
+  friday.addEventListener("click", function () {
     for (let index = 0; index < btnDivFriday.length; index += 1) {
-      if (btnDivFriday[index].innerHTML !== 'SEXTOU o/') {
-        btnDivFriday[index].innerHTML = 'SEXTOU o/';
+      if (btnDivFriday[index].innerHTML !== "SEXTOU o/") {
+        btnDivFriday[index].innerHTML = "SEXTOU o/";
       } else {
         btnDivFriday[index].innerHTML = dezFridays[index];
       }
     }
   });
 }
-let dezFridays = [ 4, 11, 18, 25 ];
+let dezFridays = [4, 11, 18, 25];
 changeColorFridays(dezFridays);
 
 // Exercício 6
@@ -154,9 +154,9 @@ dias.addEventListener("mouseout",function(event){
 // Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 
-function criaTarefa(string){
-  let createMyTask = document.querySelector('.my-tasks');
-  let newTask = document.createElement('span');
+function criaTarefa(string) {
+  let createMyTask = document.querySelector(".my-tasks");
+  let newTask = document.createElement("span");
   newTask.innerHTML = string;
   createMyTask.appendChild(newTask);
 }
@@ -168,12 +168,31 @@ criaTarefa("Projeto");
 // O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 
-function changeColorDays(color){
-  let createMyTaskColor = document.querySelector('.my-tasks');
-  let newDiv = document.createElement('div');
+function divColor(color) {
+  let createMyTaskColor = document.querySelector(".my-tasks");
+  let newDiv = document.createElement("div");
 
-  newDiv.className = "task"
+  newDiv.className = "task";
   newDiv.style.backgroundColor = color;
   createMyTaskColor.appendChild(newDiv);
 }
-changeColorDays("blue");
+divColor("red");
+
+// Exercício 9:
+
+// Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+function changeColorDays() {
+  let colorTask = document.querySelector(".task");
+
+  colorTask.addEventListener("click", function () {
+    //colorTask.className = "task selected";
+    if (colorTask.className === "task selected") {
+      colorTask.className = "task";
+    } else {
+      colorTask.className = "task selected";
+    }
+  });
+}
+changeColorDays();
