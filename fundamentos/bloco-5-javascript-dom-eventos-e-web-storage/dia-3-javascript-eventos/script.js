@@ -29,41 +29,38 @@ const dezDaysList = [
 
 //Exercicio 01
 
-//Os dias devem estar contidos em uma tag <li> , e todos devem ter a classe day . Ex: <li class="day">3</li>
-let dias = document.getElementById("days");
+function createDays() {
+  //Os dias devem estar contidos em uma tag <li> , e todos devem ter a classe day . Ex: <li class="day">3</li>
+  let dias = document.querySelector("#days");
 
-for (let index = 0; index < dezDaysList.length; index++) {
-  let liElement = document.createElement("li");
-  liElement.classList.add("day");
-  liElement.innerText = dezDaysList[index];
-  dias.appendChild(liElement);
-}
-
-//Os dias 24, 25 e 31 são feriados e, além da classe day , devem conter também a classe holiday . Ex: <li class="day holiday">24</li>
-let holiday = document.getElementsByClassName("day");
-for (let index = 0; index < holiday.length; index += 1) {
-  if (
-    holiday[index].innerText == 24 ||
-    holiday[index].innerText == 25 ||
-    holiday[index].innerText == 31
-  ) {
-    holiday[index].classList.add("holiday");
+  for (let index = 0; index < dezDaysList.length; index += 1) {
+    let dia = dezDaysList[index];
+    let liElement = document.createElement("li");
+  
+  //Os dias 24, 25 e 31 são feriados e, além da classe day , devem conter também a classe holiday . Ex: <li class="day holiday">24</li>
+    if (dia === 24 || dia === 31){
+      liElement.className = "day holiday";
+      liElement.innerHTML = dia;
+      dias.appendChild(liElement);
+    }
+  //Os dias 4, 11, 18 e 25 são Sexta-feira. Eles devem conter a classe day e a classe friday . Ex: <li class="day friday">4</li>
+    else if (dia === 4 || dia === 11 || dia === 18) {
+      liElement.className = "day friday";
+      liElement.innerHTML = dia;
+      dias.appendChild(liElement);
+    }
+    else if(dia === 25){
+      liElement.className = "day holiday friday";
+      liElement.innerHTML = dia;
+      dias.appendChild(liElement);
+    }else{
+      liElement.innerHTML = dia;
+      liElement.className = "day";
+      dias.appendChild(liElement);
+    }
   }
 }
-
-//Os dias 4, 11, 18 e 25 são Sexta-feira. Eles devem conter a classe day e a classe friday . Ex: <li class="day friday">4</li>
-let friday = document.getElementsByClassName("day");
-for (let index = 0; index < friday.length; index += 1) {
-  if (
-    friday[index].innerText == 4 ||
-    friday[index].innerText == 11 ||
-    friday[index].innerText == 18 ||
-    friday[index].innerText == 25
-  ) {
-    friday[index].classList.add("friday");
-  }
-}
-
+createDays();
 // Exercício 2:
 
 // Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
