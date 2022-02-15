@@ -124,7 +124,6 @@ buttonFriday("Sexta-feira");
 function changeColorFridays(dezFridays) {
   let btnDivFriday = document.querySelectorAll('.friday');
   let friday = document.getElementById('btn-friday');
-  let days = document.querySelectorAll('.friday');
   
   friday.addEventListener('click', function () {
     for (let index = 0; index < btnDivFriday.length; index += 1) {
@@ -138,3 +137,27 @@ function changeColorFridays(dezFridays) {
 }
 let dezFridays = [ 4, 11, 18, 25 ];
 changeColorFridays(dezFridays);
+
+// Exercício 6
+
+// Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+
+dias.addEventListener("mouseover",function(event){
+  event.target.style.color = "red";
+})
+
+dias.addEventListener("mouseout",function(event){
+  event.target.style.color = "";
+})
+
+// Exercício 7:
+// Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+
+function criaTarefa(string){
+  let createMyTask = document.querySelector('.my-tasks');
+  let newTask = document.createElement('span');
+  newTask.innerHTML = string;
+  createMyTask.appendChild(newTask);
+}
+criaTarefa("cozinhar");
