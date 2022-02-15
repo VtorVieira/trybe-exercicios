@@ -142,13 +142,13 @@ changeColorFridays(dezFridays);
 
 // Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 
-dias.addEventListener("mouseover",function(event){
+/*dias.addEventListener("mouseover",function(event){
   event.target.style.color = "red";
 })
 
 dias.addEventListener("mouseout",function(event){
   event.target.style.color = "";
-})
+})*/
 
 // Exercício 7:
 // Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
@@ -160,4 +160,20 @@ function criaTarefa(string){
   newTask.innerHTML = string;
   createMyTask.appendChild(newTask);
 }
-criaTarefa("cozinhar");
+criaTarefa("Projeto");
+
+// Exercício 8:
+
+// Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
+// O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+
+function changeColorDays(color){
+  let createMyTaskColor = document.querySelector('.my-tasks');
+  let newDiv = document.createElement('div');
+
+  newDiv.className = "task"
+  newDiv.style.backgroundColor = color;
+  createMyTaskColor.appendChild(newDiv);
+}
+changeColorDays("blue");
