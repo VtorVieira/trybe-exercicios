@@ -84,15 +84,15 @@ buttonHoliday("Feriados");
 // Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
 
-function changeColorHolidys(){
-  let btnDivHoliday = document.querySelector('#btn-holiday');
-  let holidays = document.querySelectorAll('.holiday');
-  
-  btnDivHoliday.addEventListener('click', function(){
+function changeColorHolidys() {
+  let btnDivHoliday = document.querySelector("#btn-holiday");
+  let holidays = document.querySelectorAll(".holiday");
+
+  btnDivHoliday.addEventListener("click", function () {
     for (let index = 0; index < holidays.length; index += 1) {
       if (holidays[index].style.background == "white") {
         holidays[index].style.background = "rgb(238,238,238)";
-      }else{
+      } else {
         holidays[index].style.background = "white";
       }
     }
@@ -106,14 +106,35 @@ changeColorHolidys();
 // Adicione a este botão o ID "btn-friday" .
 // Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 
-function buttonFriday(string){
-  let btnDivFriday = document.querySelector('.buttons-container');
-  let btnFriday = document.createElement('button');
-  btnFriday.id = 'btn-friday';
+function buttonFriday(string) {
+  let btnDivFriday = document.querySelector(".buttons-container");
+  let btnFriday = document.createElement("button");
+  btnFriday.id = "btn-friday";
   btnFriday.innerHTML = string;
   btnDivFriday.appendChild(btnFriday);
 }
 
 buttonFriday("Sexta-feira");
 
+// Exercício 5:
 
+// Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+// É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
+
+function changeColorFridays(dezFridays) {
+  let btnDivFriday = document.querySelectorAll('.friday');
+  let friday = document.getElementById('btn-friday');
+  let days = document.querySelectorAll('.friday');
+  
+  friday.addEventListener('click', function () {
+    for (let index = 0; index < btnDivFriday.length; index += 1) {
+      if (btnDivFriday[index].innerHTML !== 'SEXTOU o/') {
+        btnDivFriday[index].innerHTML = 'SEXTOU o/';
+      } else {
+        btnDivFriday[index].innerHTML = dezFridays[index];
+      }
+    }
+  });
+}
+let dezFridays = [ 4, 11, 18, 25 ];
+changeColorFridays(dezFridays);
