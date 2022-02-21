@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Forms - Vitor #vqv</h1>
+    <form action="" name="form-teste" method="get">
+        <label for="input-nome">Nome:
+            <input type="text" name="nome" minlength="10" maxlength="40" placeholder="Digite o seu nome" id="input-nome">
+        </label><br><br>
+        <label for="input-email">E-mail
+            <input type="email" name="email" minlength="10" maxlength="50" placeholder="Digite o seu email" id="input-email">
+        </label><br><br>
+        <label for="">
+            <input type="radio" name="destino" id="input-destino">Cidade
+        </label>
+        <label for="">
+            <input type="radio" name="destino" id="input-destino">Campo
+        </label>
+        <label for="">
+            <input type="radio" name="destino" id="input-destino">Praia
+        </label>
+        <label for="">
+            <input type="radio" name="destino" id="input-destino">Montanhas
+        </label><br><br>
+        <label for="text-trip">
+            <textarea name="tryp" id="text-trip" cols="45" rows="15" maxlength="500" placeholder="Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+            "></textarea>
+        </label><br><br>
+        <label for="input-date">Qual a melhor data para realizar sua viagem?:
+            <input type="date" name="date" id="input-date">
+        </label><br><br>
+        <label for="input-ofeta-sim">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?:<br>
+            <input type="checkbox" name="opcao" id="input-ofeta-sim">Sim
+        </label>
+        <label for="input-ofeta-nao">
+            <input type="checkbox" name="opcao" id="input-ofeta-nao">Não
+        </label><br><br>
+        <label for="input-foto-sim">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.:<br>
+            <input type="checkbox" name="opcao" id="input-foto-sim">Sim
+        </label>
+        <label for="input-foto-nao">
+            <input type="checkbox" name="opcao" id="input-foto-nao">Não
+        </label><br><br>
+        <button id="enviad">Enviar</button>
+        
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
