@@ -5,3 +5,17 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+@media screen and (max-width: 500px) {
+  
+}
+
+
+@media screen and (max-width: 1000px) {
+  
+}
+
+
+@media screen and (max-width: 1500px) {
+  
+}
