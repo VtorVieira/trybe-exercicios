@@ -30,8 +30,9 @@ testingScope(true);
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-// Seu código aqui.
-// https://pt.stackoverflow.com/questions/9900/como-ordenar-um-array-por-valores
+// // Seu código aqui.
+// // https://pt.stackoverflow.com/questions/9900/como-ordenar-um-array-por-valores
+
 function sortfunction(a, b){
   return (a - b) // faz com que o array seja ordenado numericamente e de ordem crescente.
 }
