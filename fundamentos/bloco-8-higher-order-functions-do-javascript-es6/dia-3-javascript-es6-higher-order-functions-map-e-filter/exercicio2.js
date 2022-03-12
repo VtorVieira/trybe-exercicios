@@ -64,13 +64,11 @@ const books = [
 // Adicione o código do exercício aqui:
 function nameAndAge() {
   // escreva seu código aqui
-  const name = books.map((element) => {
-    return {
-      age: element.releaseYear - element.author.birthYear,
-      author: element.author.name
-    }
-  })
-  return name.sort((a,b) => a.age - b.age);
+  const name = books.map((element) => ({
+    age: element.releaseYear - element.author.birthYear,
+    author: element.author.name
+  })).sort((a, b) => a.age - b.age)
+  return name;
 }
 
 console.log(nameAndAge(books));
