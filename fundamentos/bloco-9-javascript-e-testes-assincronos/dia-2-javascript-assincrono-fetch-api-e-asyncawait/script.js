@@ -5,4 +5,5 @@ const fetchJoke = () => {
   // Adicionar lógica aqui!
 };
 
+
 window.onload = () => fetchJoke();
